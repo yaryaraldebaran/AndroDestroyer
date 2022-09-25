@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="coid.nexsoft.app.runner.CalculatorDestroyer">
+      <class name="coid.nexsoft.app.runner.TestMIUICalcBMI">
         <methods>
+          <include name="testOne"/>
           <include name="befTest"/>
-          <include name="testPost" invocation-numbers="0 1 2 3 4"/>
         </methods>
-      </class> <!-- coid.nexsoft.app.runner.CalculatorDestroyer -->
+      </class> <!-- coid.nexsoft.app.runner.TestMIUICalcBMI -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

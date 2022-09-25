@@ -1,4 +1,4 @@
-package coid.nexsoft.app.pageobject;
+package miui.calculator.pageobject;
 
 import org.openqa.selenium.support.PageFactory;
 
@@ -68,7 +68,6 @@ el2.click();
 	
 	public double hitungBMI(int intBerat,int intTinggicm) throws InterruptedException {
 		double doBMI=0.0;
-		
 		this.valWeight.click();
 		this.btnSeven.click();
 		this.btnZero.click();
@@ -78,8 +77,6 @@ el2.click();
 		this.btnFive.click();
 		this.goBtn.click();
 		Thread.sleep(1000);
-		
-		
 		doBMI=intBerat/Math.pow(((double)intTinggicm/100), 2); 
 		doBMI=roundAvoid(doBMI, 2);
 		System.out.println(doBMI+" adalah dari java");

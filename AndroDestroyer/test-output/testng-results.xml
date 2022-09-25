@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-09-25T09:11:11 ICT" name="Default suite" finished-at="2022-09-25T09:11:29 ICT" duration-ms="18172">
+  <suite started-at="2022-09-25T09:15:22 ICT" name="Default suite" finished-at="2022-09-25T09:15:40 ICT" duration-ms="17125">
     <groups>
     </groups>
-    <test started-at="2022-09-25T09:11:11 ICT" name="Default test" finished-at="2022-09-25T09:11:29 ICT" duration-ms="18172">
-      <class name="coid.nexsoft.app.runner.TestMIUICalcDecimalToBin">
-        <test-method is-config="true" signature="befTest()[pri:0, instance:coid.nexsoft.app.runner.TestMIUICalcDecimalToBin@3e27aa33]" started-at="2022-09-25T09:11:11 ICT" name="befTest" finished-at="2022-09-25T09:11:26 ICT" duration-ms="14479" status="PASS">
+    <test started-at="2022-09-25T09:15:22 ICT" name="Default test" finished-at="2022-09-25T09:15:40 ICT" duration-ms="17125">
+      <class name="coid.nexsoft.app.runner.TestMIUICalcDisc">
+        <test-method is-config="true" signature="befTest()[pri:0, instance:coid.nexsoft.app.runner.TestMIUICalcDisc@3e27aa33]" started-at="2022-09-25T09:15:22 ICT" name="befTest" finished-at="2022-09-25T09:15:35 ICT" duration-ms="12584" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- befTest -->
-        <test-method signature="testOne()[pri:0, instance:coid.nexsoft.app.runner.TestMIUICalcDecimalToBin@3e27aa33]" started-at="2022-09-25T09:11:26 ICT" name="testOne" finished-at="2022-09-25T09:11:29 ICT" duration-ms="3640" status="PASS">
+        <test-method signature="testOne()[pri:0, instance:coid.nexsoft.app.runner.TestMIUICalcDisc@3e27aa33]" started-at="2022-09-25T09:15:35 ICT" name="testOne" finished-at="2022-09-25T09:15:40 ICT" duration-ms="4487" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testOne -->
-      </class> <!-- coid.nexsoft.app.runner.TestMIUICalcDecimalToBin -->
+      </class> <!-- coid.nexsoft.app.runner.TestMIUICalcDisc -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -1,4 +1,4 @@
-package coid.nexsoft.app.runner;
+package miui.calculator.runner;
 
 import static org.testng.Assert.assertTrue;
 
@@ -12,17 +12,16 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import coid.nexsoft.app.pageobject.CalcDestroyer;
-import coid.nexsoft.app.pageobject.MIUICalcBMI;
-import coid.nexsoft.app.pageobject.MIUICalcDecimalToBin;
 import coid.nexsoft.app.utils.ExcelReader;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import miui.calculator.pageobject.MIUICalcDecimalToBin;
 
-public class TestMIUICalcBMI {
+public class TestMIUICalcDecimalToBin {
 	private static AndroidDriver<MobileElement> driver;
-	private MIUICalcBMI bmi;
+	private MIUICalcDecimalToBin decToBin;
 	private Random rand;
 	@BeforeTest
 	public void befTest()
@@ -38,17 +37,17 @@ public class TestMIUICalcBMI {
 			capabilities.setCapability("appActivity", "com.miui.calculator.cal.CalculatorActivity");
 			capabilities.setCapability("noReset", "true");
 			driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
-			bmi = new MIUICalcBMI(driver);
+			decToBin = new MIUICalcDecimalToBin(driver);
 			
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		}
 	}
 	@Test
-	public void testOne() throws InterruptedException {
-		bmi.pindahKeBMI();
-		double bmiHit = bmi.hitungBMI(70, 165);
-		assertTrue(bmi.bmiRes().contains(Double.toString(bmiHit)));
+	public void testOne() {
+		decToBin.pindahKeNumSys();
+		String binJ = decToBin.tryNine(9);
+		assertTrue(binJ.equals(decToBin.getBin()));
 	}
 }
 

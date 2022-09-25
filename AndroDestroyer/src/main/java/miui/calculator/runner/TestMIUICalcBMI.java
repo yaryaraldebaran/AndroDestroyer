@@ -1,4 +1,6 @@
-package coid.nexsoft.app.runner;
+package miui.calculator.runner;
+
+import static org.testng.Assert.assertTrue;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -10,18 +12,16 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import coid.nexsoft.app.pageobject.CalcDestroyer;
-import coid.nexsoft.app.pageobject.MIUICalcBMI;
-import coid.nexsoft.app.pageobject.MIUICalcDecimalToBin;
-import coid.nexsoft.app.pageobject.MIUICalcDiscount;
 import coid.nexsoft.app.utils.ExcelReader;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import miui.calculator.pageobject.MIUICalcBMI;
 
-public class TestMIUICalcDisc {
+public class TestMIUICalcBMI {
 	private static AndroidDriver<MobileElement> driver;
-	private MIUICalcDiscount disc;
+	private MIUICalcBMI bmi;
 	private Random rand;
 	@BeforeTest
 	public void befTest()
@@ -37,16 +37,17 @@ public class TestMIUICalcDisc {
 			capabilities.setCapability("appActivity", "com.miui.calculator.cal.CalculatorActivity");
 			capabilities.setCapability("noReset", "true");
 			driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
-			disc = new MIUICalcDiscount(driver);
+			bmi = new MIUICalcBMI(driver);
 			
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		}
 	}
 	@Test
-	public void testOne() {
-		disc.pindahKeDisc();
-		disc.hitungDiscount(8, 4);
+	public void testOne() throws InterruptedException {
+		bmi.pindahKeBMI();
+		double bmiHit = bmi.hitungBMI(70, 165);
+		assertTrue(bmi.bmiRes().contains(Double.toString(bmiHit)));
 	}
 }
 

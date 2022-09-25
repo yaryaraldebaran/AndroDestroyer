@@ -1,4 +1,4 @@
-package coid.nexsoft.app.pageobject;
+package miui.calculator.pageobject;
 
 import org.openqa.selenium.support.PageFactory;
 
