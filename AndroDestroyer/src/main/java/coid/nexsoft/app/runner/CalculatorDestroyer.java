@@ -89,7 +89,7 @@ public class CalculatorDestroyer {
 	public void testPost(String x)
 	{	
 		System.out.println("\nTesting ke ---> "+ x);
-		intLoopCalc = rand.nextInt(4);
+		intLoopCalc = 1;//rand.nextInt(4);
 		intNumX = rand.nextInt(10);
 		System.out.println("nilai awal intLoopCalc "+intLoopCalc);
 		if (intLoopCalc==0) {
